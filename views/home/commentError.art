@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+
+	<meta charset="utf-8">
+	<title>小青蛙博客</title>
+	<meta name="description" content="neko-description">
+	<meta name="author" content="Little NEKO">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+<body class="activate-appear-animation header-7">
+    <p class="bg-danger error" id="Vid" style="font-size:25px;height:100px;line-height:100px; background-color:red; color:white;" >{{msg}}</p>
+    <input id="input" type="hidden" value="{{id}}">
+    <script type="text/javascript">
+        let input = document.getElementById("input");
+        let aid = input.value
+        setTimeout(function(){
+            location.href = '/home/article?id='+aid;
+        },1500)
+    </script>
+</body>
+</html>
+

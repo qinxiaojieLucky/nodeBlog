@@ -1,0 +1,18 @@
+#loginBox{
+    /* background: url(../../images/bg3.jpg) repeat-y;
+    background-size: 100% 100%; */
+    /* background-color: #3ea1df; */
+}
+#form{
+    background: white;
+    height: 40%;
+    margin: 175px auto;
+    border: 1px solid #ccc;
+    padding: 30px 50px 70px 50px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+#btn{
+    background-color: #6db8bb;
+    border: 0;
+}

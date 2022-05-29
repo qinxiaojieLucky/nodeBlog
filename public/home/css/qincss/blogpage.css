@@ -1,0 +1,58 @@
+ol{
+    list-style: none;
+}
+#blogBox{
+    width: 75%;
+    margin: 0px auto;
+    border: 1px solid #ccc;
+    padding: 0 50px 50px 50px;
+}
+#blogBox h3{
+    height: 60px;
+    line-height: 60px;
+    font-size: 25px;
+    text-align: center;
+    padding-top: 15px;
+}
+#blogBox p{
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    color: rgb(68, 62, 62);
+    text-align: center;
+}
+#blogBox .bContent{
+    font-size: 18px;
+    color: black;
+    text-indent: 2rem;
+}
+#content span{
+    display: block;
+    text-indent: 4rem;
+    margin-bottom: 25px;
+}
+
+#wrapper{
+    margin-top: 80px;
+}
+
+/* 博客目录 */
+.toc-container{
+    width: 200px;
+    /* border: 1px solid black; */
+    position: fixed;
+    top: 47%;
+    left: 5%;
+}
+.toc-container .js-toc li a{
+    text-decoration: none;
+    display: block;
+    padding: 4px 0;
+    font-weight: 300;
+}
+/* .toc-container .js-toc li a:hover,.toc-container .js-toc li a:active{
+    color: rgb(58, 230, 230);
+}
+.toc-container .js-toc li a:active{
+    color: rgb(58, 230, 230) !important;
+} */

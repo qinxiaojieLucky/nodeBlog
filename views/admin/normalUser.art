@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+
+	<meta charset="utf-8">
+	<title>小青蛙博客</title>
+	<meta name="description" content="neko-description">
+	<meta name="author" content="Little NEKO">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="/home/css/bootstrap.css">
+    <link rel="stylesheet" href="/home/css/qincss/common.css">
+    <link rel="stylesheet" href="/home/css/qincss/index.css">
+    <link rel="stylesheet" href="/home/js/qinjs/static/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/home/css/index.css">
+	<link rel="stylesheet" href="/home/css/base.css">
+    
+    <script src="/home/js/jquery.min.js"></script>
+    <script src="/home/js/qinjs/common.js"></script>
+    <script src="/home/js/vue.js"></script>
+    <script src="/home/js/bootstrap.min.js"></script>
+    <style>
+        .myInfo{
+            margin-top:80px;
+            height:100px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .myInfo>img{
+            display:block;
+            width:80px;
+            height:80px;
+            float:left;
+            margin:10px 20px;
+        }
+        .myInfo>span{
+            line-height:100px;
+            height:100px;
+            float:left;
+            color:gray;
+            font-size:25px;
+        }
+        .myInfo .btn{
+            float:right;
+            margin:32px 20px;
+            background:#3ea1df;
+            color:white;
+        }
+
+        li {
+            text-align: -webkit-match-parent;
+            display: list-item;
+        }
+        
+        .fav_list{
+            min-height: 95%;
+            padding: 0 32px 30px;
+            margin-top: 50px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,.05);
+        }
+        .fav_list_box{
+            box-sizing: border-box;
+            display: block;
+            overflow: hidden;
+            zoom: 1;
+        }
+        .fav_list_title{
+            height: 90px;
+            line-height: 90px;
+            /*border-bottom: 1px solid #e0e0e0;*/
+            display: block;
+        }
+        .fav_list_title_h3{
+            display : inline;
+        }
+        .fav_num{
+            font-size: 14px;
+            color: #4d4d4d;
+            margin-top: 30px;
+            float: right;
+        }
+        .my_fav_con{
+            display: block;
+        }
+        .my_fav_list{
+            margin: 0;
+            padding: 0;
+            font-size: 100%;
+            vertical-align: baseline;
+            border: 0;
+            display: block;
+            overflow: hidden;
+            zoom: 1;
+        }
+        .my_fav_list_li{
+            padding: 16px 0;
+            font-size: 0;
+            border-top: 1px solid #e0e0e0;
+            list-style: none;
+        }
+        .my_fav_con .my_fav_list_a{
+            width: 78%;
+            line-height: 24px;
+            font-size: 16px;
+        }
+        .my_fav_list_label{
+            margin-left: 10%;
+            font-size: 16px;
+            vertical-align: middle;
+            display: inline-block;
+            float:right;
+        }
+        .my_fav_list_label span{
+            color: #ccc;
+            margin-right: 15px;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        .cancel_fav{
+            font-style: normal;
+            color: #999;
+            vertical-align: middle;
+            cursor: pointer;
+            display: inline-block;
+        }
+        .my_fav_list_a:hover{
+            color: red;
+        }
+    </style>
+
+</head>
+<body class="activate-appear-animation header-7">
+    <div id="app">
+        <!-- 头部 -->
+        {{include '../home/common/header.art'}}
+        <!-- 我的收藏 -->
+        <div class="fav_list container-fluid">
+            <div data-v-357a65ed="" class="fav_list_box container">
+                <div  class="fav_list_title">
+                    <h3 class="fav_list_title_h3">我的收藏</h3>
+                    <div class="fav_num">
+                        共<span >{{length}}</span>条
+                    </div>
+                </div>
+                <div class="my_fav_con">
+                    <div>
+                        <ul class="my_fav_list">
+                            {{each shoucang}}
+                            <li class="my_fav_list_li" id="">
+                                <a  class="my_fav_list_a" href="/home/article?id={{@$value.aid}}" style="text-decoration:none;">
+                                    {{$value.title}}
+                                </a>
+                                <label class="my_fav_list_label">
+                                   <span style="font-size:15px;color:#605e5e; border-radius:8px;">{{dateFormat($value.publishDate, 'yyyy-mm-dd')}}</span>
+                                   <button style="font-size:10px; border:none;">
+                                        <a style="display:block;width:55px;height:25px;line-height:25px;color:#3ea1df;text-align:center;" class="cancel_fav" href="/admin/deleteShoucang?id={{@$value._id}}"><em>取消</em></a>                                   
+                                   </button>
+                                </label>
+                            </li>
+                            {{/each}}
+                        </ul> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 底部 -->
+        {{include '../home/common/bottom.art'}}
+    </div>
+</body>
+</html>

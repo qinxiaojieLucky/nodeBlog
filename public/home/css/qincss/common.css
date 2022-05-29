@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+#backTop{
+    width: 45px;
+    height: 45px;
+    position: fixed;
+    bottom: 40px;
+    right: 15px;
+    border: 1px solid #b39964;
+    background: #fdfdfd;
+    color: #b39964;
+    font-size: 30px;
+    box-sizing: border-box;
+    padding-left: 13px;
+    cursor: pointer;
+}
+
+/* 图标文字 */
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+    padding-right: 5px;
+    font-size: 20px;
+    padding-top: 3px;
+}
+.heaFocus{
+    background-color:#039198;
+}

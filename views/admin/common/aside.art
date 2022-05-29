@@ -1,0 +1,29 @@
+<div class="aside fl">
+    <ul class="menu list-unstyled">
+        <li>
+            <a class="item {{currentLink == 'user' ? 'active' : ''}}" href="/admin/user">
+                用户管理
+            </a>
+        </li>
+        <li>
+            <a class="item  {{currentLink == 'article' ? 'active' : ''}}" href="/admin/article">
+                文章管理
+            </a>
+        </li>
+        <li>
+            <a class="item  {{currentLink == 'comment' ? 'active' : ''}}" href="/admin/comment">
+                评论管理
+            </a>
+        </li>
+        <li>
+            <a class="item  {{currentLink == 'picture' ? 'active' : ''}}" href="/admin/picture">
+                图片管理
+            </a>
+        </li>
+        <li>
+            <a class="item  {{currentLink == 'bedWord' ? 'active' : ''}}" href="/admin/bedWord">
+                敏感词语
+            </a>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,16 @@
+<!-- 底部 -->
+<footer id="main-footer" style="border-top:none; margin-top:100px; height:51px;">
+    <div id="footer-rights" style="padding-top: 24px; padding-bottom: 10px; background-color: #3ea1df; color: white; position:fixed;bottom:0;width:100%;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p style="text-align: center;">Copyright  ©  2021 小青蛙 <a href="#" target="blank" style="color: rgb(220, 152, 51);">Little DEMO</a> / All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- 返回顶部 -->
+<div id="backTop" style="display: none;">
+    △
+</div>

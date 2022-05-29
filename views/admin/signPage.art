@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="/admin/css/style.css">
+</head>
+
+<body style = "background: url(./images/b1.jpg);">
+    <div class="container right-panel-active" style="width: 650px;">
+        <!-- 注册 -->
+        <div class="container_form container--signup" >
+            <h4></h4>
+            <form  class="form" method="post" action="/admin/signUp" id="signForm" style="margin-top: -20px;">
+                <h2 class="form_title">注册</h2>
+                <p style="color:red">{{message}}</p>
+                <input type="text" name="username" placeholder="User" class="input" />
+                <input type="password" name="password" placeholder="Password" class="input" />
+                <input type="password" name="repassword" placeholder="repeat Password" class="input" />
+                <button type="submit" class="btn">注册</button>
+            </form>
+        </div> 
+        <!-- 浮层 -->
+        <div class="container_overlay">
+            <div class="overlay">
+                <div class="overlay_panel overlay--left">
+                    <a style="display:block;text-decoration: none;" class="btn" id="signIn" href="/admin/login">去登录</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 背景 -->
+    <div class="slidershow">
+        <div class="slidershow--image"></div>
+    </div>
+
+    <script src="/admin/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/admin/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/admin/js/common.js"></script>
+    <script type="text/javascript">
+        // 注册
+        $('#signForm').on('submit',function(){
+            //获取用户提交表单的值
+            var result = serlizeToJson($(this))
+            if(result.username.trim().length == 0||result.password.trim().length == 0){
+                alert("请输入用户名和密码！")
+                return false;
+            }
+            // return false;
+        })
+    </script>
+</body>
+
+</html>
